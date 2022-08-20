@@ -9,6 +9,7 @@ import {
 
 import "typeface-rubik";
 import "@fontsource/ibm-plex-mono";
+import Logo from "./assets/logo.png";
 
 // TODO: Replace with your config
 console.log(process.env);
@@ -162,6 +163,9 @@ export default function App() {
       authentication={myAuthenticator}
       collections={[usersCollection, testimonialsCollection]}
       firebaseConfig={firebaseConfig}
+      logo={Logo}
+      primaryColor="#002c3e"
+      secondaryColor="#9E7D38"
     />
   );
 }
