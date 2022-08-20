@@ -3,7 +3,11 @@ import { buildCollection } from "@camberi/firecms";
 export const imagesCollection = buildCollection({
   path: "images",
   name: "Images",
-
+  permissions: () => ({
+    edit: true,
+    create: true,
+    delete: true,
+  }),
   singularName: "image",
   properties: {
     imageName: {

@@ -11,6 +11,11 @@ type Payment = {
 export const paymentCollection = buildCollection<Payment>({
   path: "payments",
   name: "Payment",
+  permissions: () => ({
+    edit: false,
+    create: false,
+    delete: false,
+  }),
   singularName: "payments",
   properties: {
     courseId: {

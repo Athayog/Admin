@@ -14,16 +14,18 @@ export const leadformsCollection = buildCollection({
       name: "Name",
       validation: { required: true },
       dataType: "string",
+      columnWidth: 500,
     },
     phone: {
       name: "Phone",
       validation: { required: true },
       dataType: "string",
     },
-    gender: {
+    email: {
       name: "email",
       validation: { required: true },
       dataType: "string",
+      columnWidth: 400,
     },
 
     createdAt: {

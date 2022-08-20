@@ -3,7 +3,11 @@ import { buildCollection } from "@camberi/firecms";
 export const testimonialsCollection = buildCollection({
   path: "testimonials",
   name: "Testimonials",
-
+  permissions: () => ({
+    edit: true,
+    create: true,
+    delete: true,
+  }),
   singularName: "testimonial",
   properties: {
     name: {

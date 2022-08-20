@@ -15,7 +15,6 @@ export const usersCollection = buildCollection<Customer>({
   permissions: ({ authController }) => ({
     edit: false,
     create: false,
-    // we have created the roles object in the navigation builder
     delete: false,
   }),
   subcollections: [paymentCollection],

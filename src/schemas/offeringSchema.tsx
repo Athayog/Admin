@@ -4,6 +4,7 @@ export const offeringsCollection = buildCollection({
   path: "offerings",
   name: "Courses",
   singularName: "offering",
+
   permissions: () => ({
     edit: true,
     create: true,
