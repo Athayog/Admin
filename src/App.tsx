@@ -4,8 +4,6 @@ import { User as FirebaseUser } from "firebase/auth";
 import {
   Authenticator,
   buildCollection,
-  buildProperty,
-  EntityReference,
   FirebaseCMSApp,
 } from "@camberi/firecms";
 
@@ -13,13 +11,13 @@ import "typeface-rubik";
 import "@fontsource/ibm-plex-mono";
 
 // TODO: Replace with your config
+console.log(process.env);
 const firebaseConfig = {
-  apiKey: "AIzaSyCawa7WCc2murmqWbS10Ub8cy8wkPRuI40",
-  authDomain: "authentication-test-7c342.firebaseapp.com",
-  projectId: "authentication-test-7c342",
-  storageBucket: "authentication-test-7c342.appspot.com",
-  messagingSenderId: "",
-  appId: "1:203021261788:web:4918e1da58de870aa64d19",
+  apiKey: process.env.REACT_APP_APIKEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_PROJECTID,
+  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+  appId: process.env.REACT_APP_APPID,
 };
 
 const locales = {
@@ -140,11 +138,11 @@ const usersCollection = buildCollection<Customer>({
 export default function App() {
   const myAuthenticator: Authenticator<FirebaseUser> = useCallback(
     async ({ user, authController }) => {
-      if (user?.email?.includes("@gmail.com")) {
-        throw Error("Not Allowed!");
-      }
-      if (!user?.email?.includes("@increasingly.com")) {
-        throw Error("Not Allowed!");
+      if (user?.email?.includes("harsimransinghbarki@gmail.com")) {
+      } else {
+        if (!user?.email?.includes("@athayogliving.com")) {
+          throw Error("Not Allowed!");
+        }
       }
 
       console.log("Allowing access to", user?.email);
