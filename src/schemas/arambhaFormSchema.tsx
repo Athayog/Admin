@@ -10,38 +10,23 @@ export const arambhaFormsCollection = buildCollection({
     delete: false,
   }),
   properties: {
+    ticketID: {
+      name: "Ticket ID",
+      validation: { required: true },
+      dataType: "string",
+    },
+    name: {
+      name: "Name",
+      validation: { required: true },
+      dataType: "string",
+    },
     age: {
       name: "Age",
       validation: { required: true },
       dataType: "string",
     },
-    category: {
-      name: "Category",
-      validation: { required: true },
-      dataType: "string",
-    },
-    createdAt: {
-      name: "Submission Date",
-      validation: { required: true },
-      dataType: "date",
-    },
     email: {
       name: "Email",
-      validation: { required: true },
-      dataType: "string",
-    },
-    gender: {
-      name: "Gender",
-      validation: { required: true },
-      dataType: "string",
-    },
-    membershipNumber: {
-      name: "Membership Number",
-      dataType: "string",
-      validation: { required: false },
-    },
-    name: {
-      name: "Name",
       validation: { required: true },
       dataType: "string",
     },
@@ -50,15 +35,31 @@ export const arambhaFormsCollection = buildCollection({
       validation: { required: true },
       dataType: "string",
     },
-    ticketID: {
-      name: "Ticket ID",
-      validation: { required: true },
-      dataType: "string",
-    },
+   
     tshirt: {
       name: "T-Shirt Size",
       validation: { required: true },
       dataType: "string",
+    },
+    gender: {
+      name: "Gender",
+      validation: { required: true },
+      dataType: "string",
+    },
+    category: {
+      name: "Category",
+      validation: { required: true },
+      dataType: "string",
+    },
+    membershipNumber: {
+      name: "Membership Number",
+      dataType: "string",
+      validation: { required: false },
+    },
+    createdAt: {
+      name: "Submission Date",
+      validation: { required: true },
+      dataType: "date",
     },
   },
 });
