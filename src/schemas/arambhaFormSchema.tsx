@@ -1,7 +1,7 @@
 import { buildCollection } from "@camberi/firecms";
 
 export const arambhaFormsCollection = buildCollection({
-  path: "arambhaform",
+  path: "arambhaForm2024",
   name: "Arambha Form",
   singularName: "arambhaform",
   permissions: () => ({
