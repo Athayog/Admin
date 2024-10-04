@@ -1,6 +1,6 @@
 import { buildCollection } from "@camberi/firecms";
 
-export const arambhaFormsCollection = buildCollection({
+export const careerFormsCollection = buildCollection({
   path: "career",
   name: "Career Form",
   singularName: "career",
