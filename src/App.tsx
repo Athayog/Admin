@@ -14,6 +14,7 @@ import { offeringsCollection } from "./schemas/offeringSchema";
 import { leadformsCollection } from "./schemas/leadFormSchema";
 import { imagesCollection } from "./schemas/imageSchema";
 import { arambhaFormsCollection } from "./schemas/arambhaFormSchema";
+import { careerFormsCollection} from "./schemas/careerFormSchema"
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_APIKEY,
   authDomain: process.env.REACT_APP_AUTHDOMAIN,
@@ -55,7 +56,8 @@ export default function App() {
         offeringsCollection,
         leadformsCollection,
         imagesCollection,
-        arambhaFormsCollection
+        arambhaFormsCollection,
+        careerFormsCollection
       ]}
       firebaseConfig={firebaseConfig}
       logo={Logo}
