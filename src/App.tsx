@@ -14,8 +14,8 @@ import { offeringsCollection } from "./schemas/offeringSchema";
 import { leadformsCollection } from "./schemas/leadFormSchema";
 import { imagesCollection } from "./schemas/imageSchema";
 import { arambhaFormsCollection } from "./schemas/arambhaFormSchema";
-import { careerFormsCollection} from "./schemas/careerFormSchema"
-import { resumeFormsCollection } from './schemas/resumeFormsCollection';
+import { careerFormsCollection} from "./schemas/careerFormSchema";
+import { resumeFormsCollection } from "./schemas/resumeFormSchema";
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_APIKEY,
   authDomain: process.env.REACT_APP_AUTHDOMAIN,
