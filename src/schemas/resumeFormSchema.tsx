@@ -10,17 +10,17 @@ export const resumeFormsCollection = buildCollection({
     delete: false,
   }),
   properties: {
-      name: {
+    fullName: {
       name: "Name",
       validation: { required: true },
       dataType: "string",
     },
-      number: {
+    phone: {
       name: "Number",
       validation: { required: true },
       dataType: "string",
     },
-     pdf_url: {
+    fileUrl: {
       name: "PDF URL",
       validation: { required: true },
       dataType: "string",
@@ -30,18 +30,18 @@ export const resumeFormsCollection = buildCollection({
       validation: { required: true },
       dataType: "date",
     },
-    current_company: {
+    currentCompany: {
       name: "Current Company",
       validation: { required: true },
       dataType: "string",
     },
-    current_ctc: {
+    currentCTC: {
       name: "Current CTC",
       validation: { required: true },
       dataType: "string",
     },
-    desigation: {
-      name: "Desigation",
+    designation: {
+      name: "Designation",
       validation: { required: true },
       dataType: "string",
     },
@@ -51,39 +51,44 @@ export const resumeFormsCollection = buildCollection({
       dataType: "string",
     },
    
-    expected_ctc: {
+    expectedCTC: {
       name: "Expected CTC",
       validation: { required: true },
       dataType: "string",
     },
-    experience: {
+    experienceInYears: {
       name: "Experience",
       validation: { required: true },
       dataType: "string",
     },
-    flexible: {
+    flexibleWithSplitShift: {
       name: "Flexible",
       validation: { required: true },
       dataType: "string",
     },
-    location: {
+    offerInHand:{
+      name: "Offer In Hand",
+      dataType: "string",
+      validation: { required: false },
+    },
+    currentLocation: {
       name: "Location",
       dataType: "string",
       validation: { required: false },
     },
   
-      notice_period: {
+    noticePeriod: {
       name: "Notice Period",
       validation: { required: true },
       dataType: "string",
     },
     
-     questions: {
+    questionsOrComments: {
       name: "Questions",
       validation: { required: true },
       dataType: "string",
     },
-       relocate: {
+    willingToRelocate: {
       name: "Relocate",
       validation: { required: true },
       dataType: "string",
