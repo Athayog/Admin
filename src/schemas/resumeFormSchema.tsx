@@ -28,7 +28,7 @@ export const resumeFormsCollection = buildCollection({
     createdAt: {
       name: "createdAt",
       validation: { required: true },
-      dataType: "date",
+      dataType: "string",
     },
     currentCompany: {
       name: "Current Company",
