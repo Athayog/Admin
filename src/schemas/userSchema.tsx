@@ -9,9 +9,10 @@ type Customer = {
 
 export const usersCollection = buildCollection<Customer>({
   name: "Users",
-
+  group: "Live Forms",
   singularName: "User",
   path: "users",
+  description: "Collection of user profiles storing name, email, phone, and associated order ID (with nested payment details).",
   permissions: ({ authController }) => ({
     edit: false,
     create: false,

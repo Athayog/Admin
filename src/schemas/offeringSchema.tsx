@@ -4,7 +4,8 @@ export const offeringsCollection = buildCollection({
   path: "offerings",
   name: "Courses",
   singularName: "offering",
-
+  group: "Old Forms No Longer Used",
+  description: "Course offerings including trial and base courses, with pricing and availability details.",
   permissions: () => ({
     edit: true,
     create: true,

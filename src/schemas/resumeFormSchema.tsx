@@ -4,6 +4,8 @@ export const resumeFormsCollection = buildCollection({
   path: "resume",
   name: "Resume Form",
   singularName: "resume",
+  group: "Live Forms",
+  description: "User-submitted resumes capturing personal details, current employment info, salary expectations, experience, and additional comments.",
   permissions: () => ({
     edit: false,
     create: false,
@@ -50,7 +52,7 @@ export const resumeFormsCollection = buildCollection({
       validation: { required: true },
       dataType: "string",
     },
-   
+
     expectedCTC: {
       name: "Expected CTC",
       validation: { required: true },
@@ -66,7 +68,7 @@ export const resumeFormsCollection = buildCollection({
       validation: { required: true },
       dataType: "string",
     },
-    offerInHand:{
+    offerInHand: {
       name: "Offer In Hand",
       dataType: "string",
       validation: { required: false },
@@ -76,13 +78,13 @@ export const resumeFormsCollection = buildCollection({
       dataType: "string",
       validation: { required: false },
     },
-  
+
     noticePeriod: {
       name: "Notice Period",
       validation: { required: true },
       dataType: "string",
     },
-    
+
     questionsOrComments: {
       name: "Questions",
       validation: { required: true },
@@ -93,6 +95,6 @@ export const resumeFormsCollection = buildCollection({
       validation: { required: true },
       dataType: "string",
     },
-    
+
   },
 });

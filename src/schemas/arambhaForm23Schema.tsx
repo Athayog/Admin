@@ -1,19 +1,34 @@
 import { buildCollection } from "@camberi/firecms";
 
-export const formsCollection = buildCollection({
-  path: "forms",
-  name: "Forms",
-  singularName: "form",
-  group: "Old Forms No Longer Used",
-  description: "Deprecated form used for capturing course interests, experience, and referral details from users.",
+export const arambhaForms23Collection = buildCollection({
+  path: "arambhaForm2023",
+  name: "Arambha Form 2023",
+  singularName: "arambhaForm2023",
+  group: 'Arambha Yoga Day Forms',
+  description: "Submission records for Arambha Yoga Day 2023, including participant info, contact details, and preferences.",
   permissions: () => ({
     edit: false,
     create: false,
-    delete: true,
+    delete: false,
   }),
   properties: {
+    ticketID: {
+      name: "Ticket ID",
+      validation: { required: true },
+      dataType: "string",
+    },
     name: {
       name: "Name",
+      validation: { required: true },
+      dataType: "string",
+    },
+    age: {
+      name: "Age",
+      validation: { required: true },
+      dataType: "string",
+    },
+    email: {
+      name: "Email",
       validation: { required: true },
       dataType: "string",
     },
@@ -22,36 +37,23 @@ export const formsCollection = buildCollection({
       validation: { required: true },
       dataType: "string",
     },
+    location: {
+      name: "Location",
+      validation: { required: true },
+      dataType: "string",
+    },
+    member: {
+      name: "Member",
+      validation: { required: true },
+      dataType: "string",
+    },
+    tshirt: {
+      name: "T-Shirt Size",
+      validation: { required: true },
+      dataType: "string",
+    },
     gender: {
       name: "Gender",
-      validation: { required: true },
-      dataType: "string",
-    },
-    course: {
-      name: "Course",
-      validation: { required: true },
-      dataType: "string",
-    },
-    conditions: {
-      name: "Conditions",
-      validation: { required: true },
-      dataType: "array",
-      of: {
-        dataType: "string",
-      },
-    },
-    experience: {
-      name: "Experience",
-      validation: { required: true },
-      dataType: "string",
-    },
-    referral: {
-      name: "referral",
-      validation: { required: true },
-      dataType: "string",
-    },
-    style: {
-      name: "Style",
       validation: { required: true },
       dataType: "string",
     },

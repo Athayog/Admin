@@ -4,6 +4,7 @@ import { User as FirebaseUser } from "firebase/auth";
 import { Authenticator, FirebaseCMSApp } from "@camberi/firecms";
 
 import "typeface-rubik";
+import "@fontsource/inter"; // Defaults to weight 400
 import "@fontsource/ibm-plex-mono";
 import Logo from "./assets/logo.png";
 import { usersCollection } from "./schemas/userSchema";
@@ -13,9 +14,18 @@ import { enquiryFormsCollection } from "./schemas/enquiryFormSchema";
 import { offeringsCollection } from "./schemas/offeringSchema";
 import { leadformsCollection } from "./schemas/leadFormSchema";
 import { imagesCollection } from "./schemas/imageSchema";
-import { arambhaFormsCollection } from "./schemas/arambhaFormSchema";
-import { careerFormsCollection} from "./schemas/careerFormSchema";
+import { arambhaForms24Collection } from "./schemas/arambhaForm24Schema";
+import { careerFormsCollection } from "./schemas/careerFormSchema";
 import { resumeFormsCollection } from "./schemas/resumeFormSchema";
+import { arambhaForms23Collection } from "./schemas/arambhaForm23Schema"
+import { arambhaForms25Collection } from "./schemas/arambhaForm25Schema"
+import { contactMessagesCollection } from "./schemas/contactMessagesSchema";
+import { academyFormv2Collection } from "./schemas/academyFormSchema";
+import { enquiryFormv2Collection } from "./schemas/enquireyFormsv2Schema";
+import { trialClassFormCollection } from "./schemas/trialClassFormSchema";
+import { weightLossFormCollection } from "./schemas/weightLossSchema";
+import { workshopFormCollection } from "./schemas/workshopFormSchema";
+
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_APIKEY,
   authDomain: process.env.REACT_APP_AUTHDOMAIN,
@@ -50,6 +60,9 @@ export default function App() {
       name={"Athayog"}
       authentication={myAuthenticator}
       collections={[
+        arambhaForms23Collection,
+        arambhaForms24Collection,
+        arambhaForms25Collection,
         usersCollection,
         testimonialsCollection,
         formsCollection,
@@ -57,9 +70,14 @@ export default function App() {
         offeringsCollection,
         leadformsCollection,
         imagesCollection,
-        arambhaFormsCollection,
         careerFormsCollection,
-        resumeFormsCollection
+        resumeFormsCollection,
+        contactMessagesCollection,
+        academyFormv2Collection,
+        enquiryFormv2Collection,
+        trialClassFormCollection,
+        weightLossFormCollection,
+        workshopFormCollection
       ]}
       firebaseConfig={firebaseConfig}
       logo={Logo}

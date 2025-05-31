@@ -3,6 +3,8 @@ import { buildCollection } from "@camberi/firecms";
 export const testimonialsCollection = buildCollection({
   path: "testimonials",
   name: "Testimonials",
+  group: "Old Forms No Longer Used",
+  description: "Collection of user testimonials including name, review text, star rating, and publication status.",
   permissions: () => ({
     edit: true,
     create: true,

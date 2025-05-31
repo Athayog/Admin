@@ -3,6 +3,8 @@ import { buildCollection } from "@camberi/firecms";
 export const imagesCollection = buildCollection({
   path: "images",
   name: "Images",
+  group: "Old Forms No Longer Used",
+  description: "Image assets used across the site with SEO alt text, type, and visibility settings.",
   permissions: () => ({
     edit: true,
     create: true,

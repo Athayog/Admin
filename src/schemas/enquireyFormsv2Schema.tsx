@@ -1,44 +1,47 @@
 import { buildCollection } from "@camberi/firecms";
 
-export const enquiryFormsCollection = buildCollection({
-  path: "enquiryForms",
+export const enquiryFormv2Collection = buildCollection({
+  path: "enquiryFormsv2",
   name: "Enquiry Form",
-  group: "Old Forms No Longer Used",
-  description: "Legacy version of the user enquiry form previously used for capturing contact and interest details.",
+  singularName: "enquiryFormsv2",
+  description: "Enquiries submitted by users through the main website or landing pages. Used for initial contact and lead capture.",
+  group: "Live Forms",
   permissions: () => ({
     edit: false,
     create: false,
-    delete: true,
+    delete: false,
   }),
-  singularName: "enquiryform",
   properties: {
-    name: {
+    fullName: {
       name: "Name",
       validation: { required: true },
       dataType: "string",
-      columnWidth: 500,
     },
-    phone: {
-      name: "phone",
+    phoneNumber: {
+      name: "Phone",
       validation: { required: true },
       dataType: "string",
     },
     email: {
-      name: "Email",
+      name: "email",
       validation: { required: true },
       dataType: "string",
       columnWidth: 400,
     },
-    details: {
-      name: "Details",
+    location: {
+      name: "Location",
       validation: { required: true },
       dataType: "string",
-      columnWidth: 800,
+    },
+    pageSource: {
+      name: "Source Of Entry",
+      validation: { required: true },
+      dataType: "string",
     },
     createdAt: {
       name: "Submission Date",
       validation: { required: true },
-      dataType: "date",
+      dataType: "string",
     },
   },
 });

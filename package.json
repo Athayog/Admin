@@ -6,6 +6,7 @@
     "@camberi/firecms": "^2.0.0-alpha.26",
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
+    "@fontsource/inter": "^5.2.5",
     "@mui/icons-material": "^5",
     "@mui/lab": "^5.0.0-alpha.95",
     "@mui/material": "^5",

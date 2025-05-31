@@ -1,11 +1,11 @@
 import { buildCollection } from "@camberi/firecms";
 
-export const leadformsCollection = buildCollection({
-  path: "leadForms",
-  name: "Lead Form",
-  singularName: "leadform",
-  group: "Old Forms No Longer Used",
-  description: "Legacy lead capture forms no longer active but retained for historical data.",
+export const contactMessagesCollection = buildCollection({
+  path: "contactMessages",
+  name: "Contact Messages",
+  singularName: "contactMessages",
+  description: "Messages submitted through the website contact form. Useful for user queries, feedback, or support requests.",
+  group: "Live Forms",
   permissions: () => ({
     edit: false,
     create: false,
@@ -16,7 +16,6 @@ export const leadformsCollection = buildCollection({
       name: "Name",
       validation: { required: true },
       dataType: "string",
-      columnWidth: 500,
     },
     phone: {
       name: "Phone",
@@ -29,11 +28,15 @@ export const leadformsCollection = buildCollection({
       dataType: "string",
       columnWidth: 400,
     },
-
+    message: {
+      name: "Message",
+      validation: { required: true },
+      dataType: "string",
+    },
     createdAt: {
       name: "Submission Date",
       validation: { required: true },
-      dataType: "date",
+      dataType: "string",
     },
   },
 });

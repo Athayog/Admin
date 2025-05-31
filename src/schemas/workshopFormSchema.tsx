@@ -1,95 +1,82 @@
 import { buildCollection } from "@camberi/firecms";
 
-export const careerFormsCollection = buildCollection({
-  path: "career",
-  name: "Career Form",
-  singularName: "career",
-  group: "Old Forms No Longer Used",
-  description: "Archived career form used for previous hiring cycles. No longer in active use.",
+export const workshopFormCollection = buildCollection({
+  path: "workshopForm",
+  name: "Workshop Form",
+  description: "Workshop form submissions capturing participant's personal, health, emergency, and dietary details.",
+  singularName: "workshopForm",
+  group: "Live Forms",
   permissions: () => ({
     edit: false,
     create: false,
     delete: false,
   }),
   properties: {
-    name: {
+    fullName: {
       name: "Name",
       validation: { required: true },
       dataType: "string",
     },
-    number: {
-      name: "Number",
-      validation: { required: true },
-      dataType: "string",
-    },
-    pdf_url: {
-      name: "PDF URL",
-      validation: { required: true },
-      dataType: "string",
-    },
-    createdAt: {
-      name: "createdAt",
-      validation: { required: true },
-      dataType: "date",
-    },
-    current_company: {
-      name: "Current Company",
-      validation: { required: true },
-      dataType: "string",
-    },
-    current_ctc: {
-      name: "Current CTC",
-      validation: { required: true },
-      dataType: "string",
-    },
-    desigation: {
-      name: "Desigation",
+    phoneNumber: {
+      name: "Phone",
       validation: { required: true },
       dataType: "string",
     },
     email: {
-      name: "Email",
+      name: "email",
       validation: { required: true },
       dataType: "string",
-    },
-
-    expected_ctc: {
-      name: "Expected CTC",
-      validation: { required: true },
-      dataType: "string",
-    },
-    experience: {
-      name: "Experience",
-      validation: { required: true },
-      dataType: "string",
-    },
-    flexible: {
-      name: "Flexible",
-      validation: { required: true },
-      dataType: "string",
+      columnWidth: 400,
     },
     location: {
       name: "Location",
-      dataType: "string",
-      validation: { required: false },
-    },
-
-    notice_period: {
-      name: "Notice Period",
       validation: { required: true },
       dataType: "string",
     },
-
-    questions: {
-      name: "Questions",
+    gender: {
+      name: "Gender",
       validation: { required: true },
       dataType: "string",
     },
-    relocate: {
-      name: "Relocate",
+    healthConditions: {
+      name: "Health Conditions",
       validation: { required: true },
       dataType: "string",
     },
-
+    currentLocation: {
+      name: "Current Location",
+      validation: { required: true },
+      dataType: "string",
+    },
+    emergencyContactNameAndRelation: {
+      name: "Emergency Contact Name & Relation",
+      validation: { required: true },
+      dataType: "string",
+    },
+    emergencyContactNumber: {
+      name: "Emergency Contact Number",
+      validation: { required: true },
+      dataType: "string",
+    },
+    pageSource: {
+      name: "Page Source",
+      validation: { required: true },
+      dataType: "string",
+    },
+    preferredDietaryPreferences: {
+      name: "Preferred Dietary Preferences",
+      validation: { required: true },
+      dataType: "string",
+    },
+    weight: {
+      name: "Weight",
+      validation: { required: true },
+      dataType: "string",
+    },
+    createdAt: {
+      name: "Submission Date",
+      validation: { required: true },
+      dataType: "string",
+    },
   },
 });
