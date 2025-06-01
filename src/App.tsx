@@ -25,6 +25,7 @@ import { enquiryFormv2Collection } from "./schemas/enquireyFormsv2Schema";
 import { trialClassFormCollection } from "./schemas/trialClassFormSchema";
 import { weightLossFormCollection } from "./schemas/weightLossSchema";
 import { workshopFormCollection } from "./schemas/workshopFormSchema";
+import { arambhaForms22collection } from "./schemas/arambhaForm22Schema";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_APIKEY,
@@ -77,7 +78,8 @@ export default function App() {
         enquiryFormv2Collection,
         trialClassFormCollection,
         weightLossFormCollection,
-        workshopFormCollection
+        workshopFormCollection,
+        arambhaForms22collection
       ]}
       firebaseConfig={firebaseConfig}
       logo={Logo}
