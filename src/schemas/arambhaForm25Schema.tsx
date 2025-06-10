@@ -51,7 +51,7 @@ export const arambhaForms25Collection = buildCollection({
         "friend family referral": "Friend or family referral",
         "event website": "Event website",
         "poster flyer": "Poster or flyer",
-        "online advertisement": "Online advertisement"
+        "indiranagar run club": "Indiranagar run club"
       }
     },
     experience: {
