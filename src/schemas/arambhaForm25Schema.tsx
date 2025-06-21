@@ -83,6 +83,10 @@ export const arambhaForms25Collection = buildCollection({
     createdAt: {
       dataType: "string",
       name: "Created At"
+    },
+    scanned: {
+      dataType: "number",
+      name: "Scanned",
     }
   },
 });
