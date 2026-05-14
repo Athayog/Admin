@@ -19,6 +19,7 @@ import { careerFormsCollection } from "./schemas/careerFormSchema";
 import { resumeFormsCollection } from "./schemas/resumeFormSchema";
 import { arambhaForms23Collection } from "./schemas/arambhaForm23Schema"
 import { arambhaForms25Collection } from "./schemas/arambhaForm25Schema"
+import { arambhaForms26Collection } from "./schemas/arambhaForm26Schema"
 import { contactMessagesCollection } from "./schemas/contactMessagesSchema";
 import { academyFormv2Collection } from "./schemas/academyFormSchema";
 import { enquiryFormv2Collection } from "./schemas/enquireyFormsv2Schema";
@@ -64,6 +65,7 @@ export default function App() {
         arambhaForms23Collection,
         arambhaForms24Collection,
         arambhaForms25Collection,
+        arambhaForms26Collection,
         usersCollection,
         testimonialsCollection,
         formsCollection,
