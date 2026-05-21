@@ -77,8 +77,30 @@ export const arambhaForms26Collection = buildCollection({
       url: true,
     },
     createdAt: {
-      dataType: "date",
+      dataType: "string",
       name: "Created At",
+      readOnly: true,
+      Preview: ({ value }) => {
+        if (!value) return null;
+        try {
+          const date = new Date(value);
+          return (
+            <span>
+              {date.toLocaleDateString("en-IN", {
+                day: "2-digit",
+                month: "short",
+                year: "numeric",
+              })}{" "}
+              {date.toLocaleTimeString("en-IN", {
+                hour: "2-digit",
+                minute: "2-digit",
+              })}
+            </span>
+          );
+        } catch {
+          return <span>{value}</span>;
+        }
+      },
     },
     whatsappSent: {
       dataType: "boolean",
