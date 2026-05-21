@@ -4,35 +4,36 @@ export const arambhaForms26Collection = buildCollection({
   path: "arambhaForm26",
   name: "Arambha Form 2026",
   singularName: "arambhaForm26",
-  group: 'Arambha Yoga Day Forms',
-  description: "Submission records for Arambha Yoga Day 2026, including participant info, contact details, and preferences.",
+  group: "Arambha Yoga Day Forms",
+  description:
+    "Submission records for Arambha Yoga Day 2026, including participant info, contact details, and preferences.",
   permissions: () => ({
-    edit: true,
-    create: true,
-    delete: true,
+    edit: false,
+    create: false,
+    delete: false,
   }),
   properties: {
     fullName: {
       dataType: "string",
-      name: "Full Name"
+      name: "Full Name",
     },
     gender: {
       dataType: "string",
       name: "Gender",
       enumValues: {
-        "Male": "Male",
-        "Female": "Female",
-        "Other": "Other"
-      }
+        Male: "Male",
+        Female: "Female",
+        Other: "Other",
+      },
     },
     email: {
       dataType: "string",
       name: "Email",
-      email: true
+      email: true,
     },
     phone: {
       dataType: "string",
-      name: "Phone"
+      name: "Phone",
     },
     heardFrom: {
       dataType: "string",
@@ -43,32 +44,32 @@ export const arambhaForms26Collection = buildCollection({
         "Athayog Community": "Athayog Community",
         "Google Search": "Google Search",
         "Flyer / Poster": "Flyer / Poster",
-        "Other": "Other"
-      }
+        Other: "Other",
+      },
     },
     hasYogaExperience: {
       dataType: "string",
       name: "Yoga Experience",
       enumValues: {
-        "yes": "Yes",
-        "no": "No"
-      }
+        yes: "Yes",
+        no: "No",
+      },
     },
     tshirtSize: {
       dataType: "string",
       name: "T-Shirt Size",
       enumValues: {
-        "XS": "XS",
-        "S": "S",
-        "M": "M",
-        "L": "L",
-        "XL": "XL",
-        "XXL": "XXL"
-      }
+        XS: "XS",
+        S: "S",
+        M: "M",
+        L: "L",
+        XL: "XL",
+        XXL: "XXL",
+      },
     },
     ticketID: {
       dataType: "string",
-      name: "Ticket ID"
+      name: "Ticket ID",
     },
     fileUrl: {
       dataType: "string",
@@ -77,11 +78,19 @@ export const arambhaForms26Collection = buildCollection({
     },
     createdAt: {
       dataType: "date",
-      name: "Created At"
+      name: "Created At",
+    },
+    whatsappSent: {
+      dataType: "boolean",
+      name: "WhatsApp Sent",
+    },
+    emailSent: {
+      dataType: "boolean",
+      name: "Email Sent",
     },
     scanned: {
       dataType: "number",
       name: "Scanned",
-    }
+    },
   },
 });
