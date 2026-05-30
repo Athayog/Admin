@@ -1,4 +1,5 @@
 import { buildCollection } from "@camberi/firecms";
+import { RecordCount } from "../components/RecordCount";
 
 export const contactMessagesCollection = buildCollection({
   path: "contactMessages",
@@ -11,6 +12,7 @@ export const contactMessagesCollection = buildCollection({
     create: false,
     delete: true,
   }),
+  extraActions: ({ path }) => <RecordCount path={path} />,
   properties: {
     name: {
       name: "Name",

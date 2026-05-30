@@ -1,4 +1,5 @@
 import { buildCollection } from "@camberi/firecms";
+import { RecordCount } from "../components/RecordCount";
 
 export const testimonialsCollection = buildCollection({
   path: "testimonials",
@@ -11,6 +12,7 @@ export const testimonialsCollection = buildCollection({
     delete: true,
   }),
   singularName: "testimonial",
+  extraActions: ({ path }) => <RecordCount path={path} />,
   properties: {
     name: {
       name: "Name",

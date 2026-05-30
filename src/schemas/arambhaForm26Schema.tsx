@@ -1,4 +1,5 @@
 import { buildCollection } from "@camberi/firecms";
+import { RecordCount } from "../components/RecordCount";
 
 export const arambhaForms26Collection = buildCollection({
   path: "arambhaForm26",
@@ -12,6 +13,7 @@ export const arambhaForms26Collection = buildCollection({
     create: false,
     delete: false,
   }),
+  extraActions: ({ path }) => <RecordCount path={path} />,
   properties: {
     fullName: {
       dataType: "string",

@@ -1,5 +1,6 @@
 import { buildCollection } from "@camberi/firecms";
 import { paymentCollection } from "./paymentSchema";
+import { RecordCount } from "../components/RecordCount";
 type Customer = {
   name: string;
   email: string;
@@ -19,6 +20,7 @@ export const usersCollection = buildCollection<Customer>({
     delete: false,
   }),
   subcollections: [paymentCollection],
+  extraActions: ({ path }) => <RecordCount path={path} />,
   properties: {
     name: {
       name: "Name",

@@ -1,4 +1,5 @@
 import { buildCollection } from "@camberi/firecms";
+import { RecordCount } from "../components/RecordCount";
 
 export const imagesCollection = buildCollection({
   path: "images",
@@ -11,6 +12,7 @@ export const imagesCollection = buildCollection({
     delete: true,
   }),
   singularName: "image",
+  extraActions: ({ path }) => <RecordCount path={path} />,
   properties: {
     imageName: {
       name: "Name",

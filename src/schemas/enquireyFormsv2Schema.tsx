@@ -1,4 +1,5 @@
 import { buildCollection } from "@camberi/firecms";
+import { RecordCount } from "../components/RecordCount";
 
 export const enquiryFormv2Collection = buildCollection({
   path: "enquiryFormsv2",
@@ -11,6 +12,7 @@ export const enquiryFormv2Collection = buildCollection({
     create: false,
     delete: false,
   }),
+  extraActions: ({ path }) => <RecordCount path={path} />,
   properties: {
     fullName: {
       name: "Name",
